@@ -16,8 +16,5 @@ $ python manage.py runserver 0.0.0.0:8000
 W bazie istnieją już użytkownicy:
 
   Login: administrator
-<<<<<<< HEAD
+  
   Hasło: q1w2e3r4t5
-=======
-  Hasło: q1w2e3r4t5
->>>>>>> 03c53a00bee35d394091534ec8fd467329ca96f5
