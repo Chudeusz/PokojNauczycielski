@@ -4,6 +4,8 @@ from . import views
 from django.contrib.auth.decorators import login_required
 from django.views.generic.list import ListView
 from .models import Ogloszenia
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
