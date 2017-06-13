@@ -43,7 +43,6 @@
         <li><a href="{% url 'auth_login' %}"><i class="glyphicon glyphicon-log-in"></i> Zaloguj</a></li>
         <li><a href="{% url 'registration_register' %}"><i class="fa fa-user-plus"></i> Utwórz konto</a></li>
         {% else %}
-        <li><a>Zalogowany jako {{ user.username }}</a></li>
         <li><a href="{% url 'pokoj:lista' %}"><i class="glyphicon glyphicon-th-list"> </i> Lista ogłoszeń</a></li>
         <li><a href="{% url 'auth_logout' %}"><i class="glyphicon glyphicon-log-out"> </i> Wyloguj [ {{ user.username }} ]</a></li>
         {% endif %}
