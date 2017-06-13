@@ -2,7 +2,7 @@
 
 [![Strona](http://soswinformatyka.pl/assets/img/logo.png)](http://soswinformatyka.pl)
 
-##Instalacja
+## Instalacja
 
 ```sh
 $ git clone https://github.com/MrChudy923/PokojNauczycielski.git
