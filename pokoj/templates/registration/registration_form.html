@@ -2,6 +2,14 @@
 {% block tytul_h1 %} Tworzenie nowego konta {% endblock %} 
 {% block tresc %}
 
+{% if form.errors %}
+  <ul class="errorlist">
+    {% for key,value in form.errors.items %} 
+      {{ value|escape }}
+    {% endfor %}
+  </ul>
+{% endif %}
+
 <form action="." method="post" id="registration_form">
   {% csrf_token %}
   <div class="form-group row">
