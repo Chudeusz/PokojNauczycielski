@@ -1,11 +1,16 @@
 {% extends "pokoj/base.html" %}
 {% block tresc %}
-<h1>Usuwanie ogłoszenia</h1>
 <form action="." method="post">
   {% csrf_token %}
-  <p>Czy na pewno chcesz usunąć ogłoszenie?</p>
-    </ol>
-  <button type="submit" class="btn btn-danger">Tak</button>
-  <a href="{% url 'pokoj:lista' %}" class="btn btn-default">Nie</a>
+  <div>
+    <h1 class="display-3">Czy na pewno chcesz usunąć ogłoszenie?</h1>
+    <h3>Tytuł: {{ object.tytul }}</h3>
+    <hr class="my-4">
+    <h3>Opis: {{ object.opis }}</h3>
+    <p class="lead">
+        <button type="submit" class="btn btn-danger">Tak</button>
+        <a href="{% url 'pokoj:lista' %}" class="btn btn-default">Nie</a>
+    </p>
+  </div>
 </form>
 {% endblock %}

@@ -1,10 +1,9 @@
 {% extends "pokoj/base.html" %}
 
 {% block tytul_h1 %}
-  Wylogowanie
+  Wylogowano
 {% endblock %}
 
 {% block tresc %}
-  <p>Zostałeś wylogowany!</p>
   <a href="{% url 'pokoj:index' %}" class="btn btn-default">Wróć do strony głównej</a>
 {% endblock %}
