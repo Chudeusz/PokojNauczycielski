@@ -17,3 +17,16 @@ h1 {
     background-color: #eee;
   }
 }
+
+.obrazek{
+  opacity: 0.1;
+  width: 150px;
+  height: 150px;
+  top: 38px;
+  left: 8px;
+  position: absolute;
+}
+
+.obrazek:hover{
+  opacity: 1;
+}
