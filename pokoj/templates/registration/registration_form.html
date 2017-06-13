@@ -1,15 +1,7 @@
 {% extends "pokoj/base.html" %} 
 {% block tytul_h1 %} Tworzenie nowego konta {% endblock %} 
 {% block tresc %}
-{% if form.errors %}
-  {% if form.non_field_errors %}
-      <ul class='form-errors'>
-          {% for error in form.non_field_errors %}
-              <li>{{ error }}</li>
-          {% endfor %}
-      </ul>
-  {% endif %}
-{% endif %}
+
 <form action="." method="post" id="registration_form">
   {% csrf_token %}
   <div class="form-group row">
@@ -41,4 +33,5 @@
     </div>
   </div>
 </form>
+
 {% endblock %}
