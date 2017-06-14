@@ -14,7 +14,7 @@ from django.http import HttpResponseRedirect
 
 def index(request):
     """Strona główna"""
-    kontekst = {'komunikat': 'Witaj w aplikacji Pokoj Nauczycielski!'}
+    kontekst = {'komunikat': 'Witaj w aplikacji Pokój Nauczycielski!'}
     return render(request, 'pokoj/index.html', kontekst)
   
 @method_decorator(login_required, 'dispatch')
