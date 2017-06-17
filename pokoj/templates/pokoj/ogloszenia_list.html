@@ -5,17 +5,29 @@
 {% endblock %}
 
 {% block tresc %}
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $(".klikajacy-wiersz").click(function() {
+        window.location = $(this).data("href");
+    });
+});
+</script>
+<style>
+  .klikajacy-wiersz{
+    cursor: pointer;
+  }
+</style>
 <div class="btn-group" style="margin-bottom: 10px;">
   <a href="{% url 'pokoj:dodaj' %}" class="btn btn-success pull-right"><i class="glyphicon glyphicon-plus"></i> Dodaj nowe ogłoszenie </a>
 </div>
 
-<table class="table table-hover">
-<thead>
-	<tr><th>Lp.</th><th>Tytuł ogłoszenia</th><th>Data dodania</th><th>Operacje</th></tr>
-</thead>
-<tbody>
+  <table class="table table-hover">
+  <thead>
+    <tr><th>Lp.</th><th>Tytuł ogłoszenia</th><th>Data dodania</th><th>Operacje</th></tr>
+  </thead>
+  <tbody>
 	{% for p in object_list reversed %}
-	<tr>
+	<tr class="klikajacy-wiersz" data-href="{% url 'pokoj:info' p.id %}">
 		<td>{{ forloop.counter }}</td>
 		<td>{{ p.tytul }}</td>
 		<td>{{ p.data }}</td>
@@ -30,4 +42,6 @@
 	{% endfor %}
 </tbody>
 </table>
+
+
 {% endblock %}
