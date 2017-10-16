@@ -1,5 +1,8 @@
 {% extends "pokoj/base.html" %}
-<img src="{% static 'pokoj/images/pokojnauczycielski.png' %}" />
+
+{% block tytul_h1 %}
+  Pokój nauczycielski
+{% endblock %}
 
 {% block tresc %}
   <p>{{ komunikat }}</p>
