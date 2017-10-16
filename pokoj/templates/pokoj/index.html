@@ -1,10 +1,11 @@
 {% extends "pokoj/base.html" %}
 
-{% block tytul_h1 %}
-  Pokój nauczycielski
+{% block logo %}
+  <img src="{% static 'pokoj/images/favicon.ico' %}" >
 {% endblock %}
 
 {% block tresc %}
+
   <p>{{ komunikat }}</p>
   Pokój nauczycielski jest to aplikacja służąca usprawnieniu dystrybucji ogłoszeń w szkole. <br />
 Jest dostępna online po zalogowaniu i weryfikacji użytkownika tylko dla nauczycieli SOSW w Lublinie. <br />
