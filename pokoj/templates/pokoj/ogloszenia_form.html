@@ -19,5 +19,7 @@
       <input type="submit" class="btn btn-success" value="Zapisz"> <a href="{% url 'pokoj:lista' %}" class="btn btn-default"><i class="fa fa-reply"></i> Wróć do listy</a>
   </div>
 </form>
-
+<script>
+	CKEDITOR.replace( 'opis' );
+</script>
 {% endblock %}
