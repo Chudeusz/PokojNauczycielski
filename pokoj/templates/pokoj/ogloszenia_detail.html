@@ -8,7 +8,7 @@
   <h2>
     {{ object.tytul }}
   </h2>
-  {% load replace_tag %}<p>{{ object.opis|linebreaksbr|replace:"&nbsp;"," " }}</p>
+  {% load replace_tag %}<p>{{ object.opis|safe }}</p>
   <footer>Dodano dnia {{ object.data }} przez <cite>{{ object.autor }}</cite></footer>
 </blockquote>
 
