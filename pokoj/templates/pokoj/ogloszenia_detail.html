@@ -4,13 +4,13 @@
 {% endblock %}
 {% block tresc %}
 
-
+<blockquote>
   <h2>
     {{ object.tytul }}
   </h2>
-  <p>{{ object.opis }}</p>
+  {% load replace_tag %}<p>{{ object.opis|linebreaksbr|replace:"&nbsp;"," " }}</p>
   <footer>Dodano dnia {{ object.data }} przez <cite>{{ object.autor }}</cite></footer>
-
+</blockquote>
 
 <a href="{% url 'pokoj:lista' %}" class="btn btn-default"><i class="fa fa-reply"></i> Wróć do listy</a>
 {% endblock %}
