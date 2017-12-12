@@ -55,7 +55,7 @@ class OgloszenieUpdate(UpdateView):
 
     model = models.Ogloszenia
     form_class = forms.OgloszeniaForm
-    success_url = reverse_lazy('pokoj:lista')  # '/pizza/lista'
+    success_url = reverse_lazy('pokoj:lista')  # '/pokoj/lista'
 
     def get_context_data(self, **kwargs):
         context = super(OgloszenieUpdate, self).get_context_data(**kwargs)
@@ -88,7 +88,7 @@ class OgloszenieUpdate(UpdateView):
 @method_decorator(login_required, 'dispatch')
 class OgloszenieDelete(DeleteView):
     model = models.Ogloszenia
-    success_url = reverse_lazy('pokoj:lista')  # '/pizza/lista'
+    success_url = reverse_lazy('pokoj:lista')  # '/pokoj/lista'
 
     def get_context_data(self, **kwargs):
         context = super(OgloszenieDelete, self).get_context_data(**kwargs)
